@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">StudyLock</string>
+    <string name="home">首页</string>
+    <string name="schedule">课程表</string>
+    <string name="statistics">统计</string>
+    <string name="profile">我的</string>
+    <string name="focus_guard_notification_title">专注守护中</string>
+    <string name="focus_guard_notification_content">正在保护您的学习专注时间</string>
+    <string name="accessibility_service_description">仅用于检测前台应用包名以帮助用户专注</string>
+    <string name="focus_alert_title">专注时间</string>
+    <string name="focus_alert_message">上课时间请保持专注，避免使用娱乐应用</string>
+    <string name="focus_alert_settings">无障碍设置</string>
+    <string name="focus_alert_close">返回专注</string>
+    <string name="focus_guard_standby">当前无课程，守护模式待机中</string>
+    <string name="focus_guard_error">状态检测异常，请检查网络和权限</string>
+    <string name="course_end_notification">课程结束，你做到了！</string>
+    <string name="focus_block_title">上课专注中</string>
+    <string name="focus_block_continue">我知道了，继续专注</string>
+    <string name="focus_block_unlock">输入密码解锁</string>
+    <string name="password_setup_hint">建议设置16位以上复杂密码，密码越复杂专注越有效</string>
+    <string name="cooldown_title">冷静期</string>
+    <string name="cooldown_message">想清楚是否真的需要解锁</string>
+    <string name="cooldown_cancel">取消解锁，继续专注</string>
+</resources>
