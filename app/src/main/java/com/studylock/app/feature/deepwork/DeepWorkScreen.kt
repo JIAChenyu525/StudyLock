@@ -146,6 +146,7 @@ private fun DeepWorkStartCard(
     onTogglePicker: (Boolean) -> Unit,
     viewModel: DeepWorkViewModel
 ) {
+    val ctx = LocalContext.current
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(20.dp),
@@ -254,6 +255,7 @@ private fun DeepWorkStartCard(
                                     selected = selected,
                                     onClick = {
                                         viewModel.startManualDeepWork(duration)
+                                        viewModel.launchLockActivity(ctx)
                                         onTogglePicker(false)
                                     },
                                     label = {

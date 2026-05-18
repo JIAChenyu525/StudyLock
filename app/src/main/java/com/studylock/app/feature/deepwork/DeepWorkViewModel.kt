@@ -292,16 +292,23 @@ class DeepWorkViewModel(application: Application) : AndroidViewModel(application
             _uiState.update {
                 it.copy(isGuardActive = true, isManualModeActive = true, manualModeRemainingMinutes = durationMinutes)
             }
-            val intent = android.content.Intent(context, com.studylock.app.feature.focus.FocusBlockActivity::class.java).apply {
-                addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
-                putExtra(com.studylock.app.feature.focus.FocusBlockActivity.EXTRA_IS_MANUAL_MODE, true)
-            }
-            context.startActivity(intent)
         } catch (e: Exception) {
             _uiState.update { it.copy(errorMessage = "开启深度工作失败: ${e.message}") }
             return
         }
         loadData()
+    }
+
+    fun launchLockActivity(context: android.content.Context) {
+        try {
+            context.startActivity(
+                android.content.Intent(context, com.studylock.app.feature.focus.FocusBlockActivity::class.java).apply {
+                    putExtra(com.studylock.app.feature.focus.FocusBlockActivity.EXTRA_IS_MANUAL_MODE, true)
+                }
+            )
+        } catch (e: Exception) {
+            _uiState.update { it.copy(errorMessage = "启动锁机失败: ${e.message}") }
+        }
     }
 
     fun stopManualDeepWork() {
